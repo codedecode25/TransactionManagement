@@ -16,12 +16,11 @@ import com.example.demo.service.EmployeeService;
 public class EmployeeController {
 		@Autowired
 		private EmployeeService employeeService;
-		
+
 		@PostMapping("/save")
 		public ResponseEntity<?> addEmployee(@RequestBody Employee employee) throws Exception{
 				Employee employeeSaved = employeeService.addEmployee(employee);
 				return new ResponseEntity<Employee>(employeeSaved, HttpStatus.CREATED);
 			}
-		
 
 }
