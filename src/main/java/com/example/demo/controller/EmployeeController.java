@@ -22,5 +22,4 @@ public class EmployeeController {
 				Employee employeeSaved = employeeService.addEmployee(employee);
 				return new ResponseEntity<Employee>(employeeSaved, HttpStatus.CREATED);
 			}
-
 }
