@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+
+        environment{
+         Maven= "/Softwares/apache-maven-3.8.6-bin/apache-maven-3.8.6/bin:$PATH"
+         PATH="/Windows/System32"
+     }
+
+    stages {
+        stage('git') {
+            steps {
+               git 'https://github.com/codedecode25/TransactionManagement.git'
+            }
+        }
+         stage('build') {
+            steps {
+               bat 'D:/Softwares/apache-maven-3.8.6-bin/apache-maven-3.8.6/bin/mvn clean install'
+            }
+        }
+    }
+}
