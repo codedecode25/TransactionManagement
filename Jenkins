@@ -9,7 +9,7 @@ pipeline {
     stages {
          stage('build') {
             steps {
-               bat 'D:/Softwares/apache-maven-3.8.6-bin/apache-maven-3.8.6/bin/mvn clean install'
+               sh 'D:/Softwares/apache-maven-3.8.6-bin/apache-maven-3.8.6/bin/mvn clean install'
             }
         }
     }
