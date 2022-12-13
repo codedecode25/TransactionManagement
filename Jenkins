@@ -6,7 +6,6 @@ pipeline {
          Maven= "/Softwares/apache-maven-3.8.6-bin/apache-maven-3.8.6/bin:$PATH"
          PATH="/Windows/System32"
      }
-
     stages {
         stage('git') {
             steps {
