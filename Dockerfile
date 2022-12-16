@@ -1,7 +1,7 @@
 FROM openjdk:11
 
-COPY target/TransactionManagement.jar
+COPY target/transaction-management.jar transaction-management.jar
 
 EXPOSE 8098
 
-ENTRYPOINT ["java", "-jar", "/TransactionManagement.jar"]
+ENTRYPOINT ["java", "-jar", "/transaction-management.jar"]

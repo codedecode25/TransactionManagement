@@ -9,14 +9,14 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>SpringDemoProject</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringDemoProject</name>
+	<artifactId>TransactionManagement</artifactId>
+	<version>1</version>
+	<name>TransactionManagement</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
-	<packaging>war</packaging>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -44,6 +44,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<finalName>transaction-management</finalName>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
