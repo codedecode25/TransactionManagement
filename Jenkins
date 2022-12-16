@@ -5,11 +5,19 @@ pipeline {
         environment{
          Maven= "/Softwares/apache-maven-3.8.6-bin/apache-maven-3.8.6/bin:$PATH"
          PATH="/Windows/System32"
+         DOCKERHUB_CREDENTIALS= credentials('dockerCredentials')
      }
     stages {
          stage('build') {
             steps {
-               bat 'D:/Softwares/apache-maven-3.8.6-bin/apache-maven-3.8.6/bin/mvn clean install'
+              sh 'mvn clean package'
+            }
+        }
+
+        stage('Login to Docker Hub') {
+            steps{
+        	sh 'echo $DOCKERHUB_CREDENTIALS_PSW | sudo docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+        	echo 'Login Completed'
             }
         }
     }
